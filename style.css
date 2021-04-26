@@ -1,0 +1,165 @@
+/* https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+body {
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo > a {
+  display: flex;
+  width: 150px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo > a > img {
+  width: 150px;
+}
+
+.container-1 {
+  border-bottom: white 1px solid;
+}
+
+.container-2 {
+  border-top: white 1px solid;
+}
+
+.container-1,
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+nav {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.opening,
+nav {
+  margin: 20px 0;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account > a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+}
+
+li:hover > a {
+  color: aquamarine;
+}
+
+.account:hover > a {
+  color: aquamarine;
+}
+
+.banner-image {
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.account,
+nav {
+  padding-right: 150px;
+}
+
+.opening,
+.logo {
+  padding-left: 150px;
+}
