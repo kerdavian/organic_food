@@ -121,7 +121,7 @@ ul {
 
 li {
   margin: 0;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 .opening,
@@ -162,4 +162,108 @@ nav {
 .opening,
 .logo {
   padding-left: 150px;
+}
+
+.banner-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.swiper-container {
+  /* position: absolute; */
+  width: 100%;
+  height: 50vw;
+}
+
+.banner-text {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  top: 200px;
+}
+
+.banner-text p {
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* .shop-now-div {
+  background-color: rgb(96, 226, 96);
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 200px;
+} */
+
+#shop-now {
+  text-decoration: none;
+  color: white;
+  padding: 10px 75px;
+  border-radius: 200px;
+  background-color: lightgreen;
+}
+
+/* main {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 40% 40%;
+} */
+
+.main-content {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cards-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  background-color: rgb(238, 230, 230);
+  text-align: center;
+  width: 12vw;
+  height: 20vw;
+  margin: 25px 25px;
+  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
+}
+
+.card-1 > p,
+.card-2 > p,
+.card-3 > p {
+  color: green;
+}
+
+.card-img {
+  padding-top: 20px;
+}
+
+.main-img {
+  /* height: 500px; */
+  width: 100%;
+  padding-bottom: 20px;
+
+  /* overflow: hidden; */
+}
+
+.img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  height: 20vw;
+  text-align: center;
 }
