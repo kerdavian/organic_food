@@ -1,0 +1,148 @@
+/* https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+body {
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+}
+
+header {
+  color: white;
+}
+
+.menu-label,
+.menu-checkbox {
+  display: none;
+}
+
+.header-main-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+
+  /* position: absolute; */
+}
+
+/* ---------------------header jobb és bal div----------------- */
+.header-left-div,
+.header-right-div {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header-left-div {
+  align-items: flex-start;
+}
+
+.header-right-div {
+  align-items: flex-end;
+}
+
+/* -----------------bal div--------------------------- */
+.header-left-div > img {
+  width: 150px;
+}
+
+.header-left-div > p {
+  margin: 0;
+}
+
+/* ---------------------------jobb div------------------------ */
+
+.account-container > a,
+.menu-item > a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-main-container {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-item {
+  padding-right: 20px;
+}
+
+.account-container > a:hover,
+.account-container > i:hover,
+.menu-item > a:hover,
+.menu-main-container > i:hover {
+  color: lightgreen;
+  cursor: pointer;
+}
+
+.vonal {
+  position: absolute;
+  height: 40px;
+  border-bottom: white 3px solid;
+}
