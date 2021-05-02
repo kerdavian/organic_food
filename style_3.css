@@ -72,15 +72,31 @@ header {
 
 .menu-label,
 .menu-checkbox {
+  position: absolute;
+  top: 6px;
+  right: 10px;
   display: none;
+}
+
+.menu-label {
+  z-index: 1;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .header-main-container {
   display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
+}
 
-  /* position: absolute; */
+.alma {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-bottom: white 1px solid;
 }
 
 /* ---------------------header jobb és bal div----------------- */
@@ -91,14 +107,19 @@ header {
   flex-direction: column;
   justify-content: space-between;
   height: 80px;
+  margin-top: 20px;
+
+  /* z-index: 1; */
 }
 
 .header-left-div {
   align-items: flex-start;
+  padding-left: 50px;
 }
 
 .header-right-div {
   align-items: flex-end;
+  padding-right: 50px;
 }
 
 /* -----------------bal div--------------------------- */
@@ -108,6 +129,7 @@ header {
 
 .header-left-div > p {
   margin: 0;
+  font-size: 16px;
 }
 
 /* ---------------------------jobb div------------------------ */
@@ -118,8 +140,22 @@ header {
   color: white;
 }
 
+.account-container > i {
+  margin-top: 4px;
+
+  /* position: absolute; */
+}
+
+.account-container {
+  display: flex;
+}
+
 .menu-main-container {
   display: flex;
+}
+
+.account-container > a {
+  z-index: 1;
 }
 
 .menu {
@@ -133,6 +169,10 @@ header {
   padding-right: 20px;
 }
 
+.menu-main-container > i {
+  margin-top: 5px;
+}
+
 .account-container > a:hover,
 .account-container > i:hover,
 .menu-item > a:hover,
@@ -141,8 +181,183 @@ header {
   cursor: pointer;
 }
 
-.vonal {
+/* --------------------banner------------------------ */
+
+.banner-text {
   position: absolute;
-  height: 40px;
-  border-bottom: white 3px solid;
+  text-align: center;
+  top: 25%;
+  width: 100%;
+
+  /* left: 50%; */
+}
+
+.banner-text > h2 {
+  color: white;
+  font-size: 4rem;
+  margin: 10px 0 15px 0;
+}
+
+.banner-button {
+  background-color: lightgreen;
+  text-decoration: none;
+  padding: 10px 50px;
+  color: white;
+  border-radius: 200px;
+}
+
+.banner-container {
+  height: 50vw;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+
+  /* height: 650; */
+  filter: brightness(50%);
+}
+
+.swiper-container {
+  z-index: -1;
+}
+
+/* ----------------------------------main------------------------------ */
+
+.main-content {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cards-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgb(238, 230, 230);
+  text-align: center;
+  width: 200px;
+  height: 300px;
+  margin: 25px 25px;
+  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
+}
+
+.card > p {
+  color: green;
+}
+
+.card-img {
+  padding-top: 20px;
+}
+
+.main-img {
+  height: 30vw;
+  width: 100%;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+}
+
+footer {
+  height: 20vw;
+  text-align: center;
+}
+
+/* ---------------------------media--------------------------------------- */
+
+@media (max-width: 930px) {
+  .banner-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .banner-image {
+    width: auto;
+    height: 700px;
+  }
+}
+
+@media (max-width: 777px) {
+  .card {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 710px) {
+  .menu-container {
+    display: none;
+  }
+
+  .menu-label {
+    display: block;
+  }
+
+  /* Ez azért szükséges,mert telefonon a hover effekt nem úgy értelmezhető,mint desktop-on */
+
+
+  /* .menu-label:hover {
+    color: lightgreen;
+  } */
+
+  .menu-checkbox:checked ~ .menu-label {
+    color: lightgreen;
+  }
+
+  .menu-checkbox:checked ~ .menu-container {
+    position: absolute;
+    right: 1.5%;
+    top: 43%;
+    z-index: 1;
+    display: block;
+    margin-top: 18px;
+    width: 200px;
+    text-align: right;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+  }
+
+  .menu-item {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  .menu-checkbox:checked ~ i {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .cards-div {
+    display: block;
+  }
+
+  .card {
+    margin: 25px auto;
+  }
+
+  .main-content {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 598px) {
+  /* .banner-text > h2 {
+    font-size: 5rem; */
+
+  .header-left-div {
+    padding-left: 10px;
+  }
+}
 }
