@@ -192,7 +192,7 @@ header {
   /* left: 50%; */
 }
 
-.banner-text > h2 {
+.banner-text > h1 {
   color: white;
   font-size: 4rem;
   margin: 10px 0 15px 0;
@@ -224,11 +224,21 @@ header {
 
 /* ----------------------------------main------------------------------ */
 
-.main-content {
+.main-content > h2 {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.card > p {
+  color: green;
+}
+
+.main-content > div > p {
   width: 500px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .cards-div {
@@ -244,10 +254,6 @@ header {
   height: 300px;
   margin: 25px 25px;
   box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
-}
-
-.card > p {
-  color: green;
 }
 
 .card-img {
@@ -286,7 +292,7 @@ footer {
 
 @media (max-width: 777px) {
   .card {
-    margin: 10px 10px;
+    margin: 25px 10px 25px 10px;
   }
 }
 
@@ -298,7 +304,6 @@ footer {
   .menu-label {
     display: block;
   }
-
 
   /* .menu-label:hover {
     color: lightgreen;
@@ -343,8 +348,6 @@ footer {
     color: lightgreen;
   }
 
-
-
   .cards-div {
     display: block;
   }
@@ -353,11 +356,11 @@ footer {
     margin: 25px auto;
   }
 
-  .main-content {
-    width: 300px;
-    margin: 0 auto;
+  .main-content > div > p {
+    width: 200px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
 
@@ -368,5 +371,4 @@ footer {
   .header-left-div {
     padding-left: 10px;
   }
-}
 }
